@@ -18,7 +18,7 @@ def search_users(query):
     query_parts = query.split()
 
     for user in users:
-        full_name = f"{user.firstname}{user.middlename}{user.lastname}"
+        full_name = f"{user.firstname}{user.middlename}{user.lastname}{user.email}"
         if all(part.lower() in full_name.lower() for part in query_parts):
             results.append(user)
     return results
